@@ -554,6 +554,7 @@ plugins:
   ###### Resources & Frameworks ######
   ###### AudioVisual ######
   ###### AudioVisual - Animations & Physics ######
+
   - name: 'MoreDramaticGravJumps\.es[mp]'
     url:
       - link: 'https://www.nexusmods.com/starfield/mods/2413/'
