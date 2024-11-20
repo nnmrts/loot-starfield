@@ -1,4 +1,9 @@
 {
 	"yaml.format.singleQuote": true,
-	"yaml.format.enable": true
+	"yaml.format.enable": true,
+	"[yaml]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	}
 }
