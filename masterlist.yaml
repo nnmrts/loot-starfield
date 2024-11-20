@@ -14,15 +14,15 @@ prelude:
 
     - &alsoUseX
       type: say
-      content: 'It’s highly recommended that you also use {0}.'
+      content: "It's highly recommended that you also use {0}."
 
     - &compatIssuesWithX
       type: say
-      content: 'This plugin has compatibility issues with {0}. For more information, read this mod’s compatibility notes.'
+      content: "This plugin has compatibility issues with {0}. For more information, read this mod's compatibility notes."
 
     - &compatNotes
       type: say
-      content: 'It is recommended that you read this mod’s [Compatibility Notes]({0}).'
+      content: "It is recommended that you read this mod's [Compatibility Notes]({0})."
 
     - &compatPatch
       type: say
@@ -47,7 +47,7 @@ prelude:
 
     - &deletePlugin
       type: warn
-      content: 'When using **{0}**, it’s recommended that you deactivate or delete this ESP file but keep the resources (e.g. meshes, textures) installed with this mod.'
+      content: "When using **{0}**, it's recommended that you deactivate or delete this ESP file but keep the resources (e.g. meshes, textures) installed with this mod."
 
     - &deprecated
       type: warn
@@ -59,7 +59,7 @@ prelude:
 
     - &essentialFiles
       type: warn
-      content: 'Another mod seems to be overwriting one of this mod’s essential files. Please ensure you’re using this mod’s version of {0} or a compatible version if available.'
+      content: "Another mod seems to be overwriting one of this mod's essential files. Please ensure you're using this mod's version of {0} or a compatible version if available."
 
     - &includesX
       type: say
@@ -87,7 +87,7 @@ prelude:
 
     - &missingRequirementXforPlugin
       type: warn
-      content: 'Some of this plugin’s requirements seem to be missing. Please ensure you have correctly installed **{0}**.'
+      content: "Some of this plugin's requirements seem to be missing. Please ensure you have correctly installed **{0}**."
 
     - &moddingPlugin
       type: error
@@ -116,7 +116,7 @@ prelude:
 
     - &patchIncluded
       type: say
-      content: 'You seem to be using **{0}**, but you have not enabled a compatibility patch for this mod. A compatibility patch is included with this plugin’s installer.'
+      content: "You seem to be using **{0}**, but you have not enabled a compatibility patch for this mod. A compatibility patch is included with this plugin's installer."
 
     - &patchOutdated
       type: warn
@@ -124,7 +124,7 @@ prelude:
 
     - &patchProvided
       type: say
-      content: 'You seem to be using **{0}**, but you have not enabled a compatibility patch for this mod. A compatibility patch is provided on this plugin’s mod page.'
+      content: "You seem to be using **{0}**, but you have not enabled a compatibility patch for this mod. A compatibility patch is provided on this plugin's mod page."
 
     - &patchUnavailable
       type: warn
@@ -140,7 +140,7 @@ prelude:
 
     - &renameXtoY
       type: warn
-      content: 'You need to rename {0} to {1} or this mod won’t work.'
+      content: "You need to rename {0} to {1} or this mod won't work."
 
     # Useful for when a plugin needs SkyUI, but shouldn't load after it (eg. when it's a master plugin).
     - &requiresMCM_X
@@ -203,7 +203,7 @@ prelude:
 
     - &versionPrecedence
       type: error
-      content: 'Delete {0} from {1}. {2}’s version must take precedence.'
+      content: "Delete {0} from {1}. {2}'s version must take precedence."
 
     - &versionUpToDateX
       type: say
@@ -221,7 +221,7 @@ prelude:
     # Global Anchors
     - &changeUnsupported
       type: say
-      content: 'Changing the type of an existing plugin isn’t supported. Additional details are provided [here]({0}).'
+      content: "Changing the type of an existing plugin isn't supported. Additional details are provided [here]({0})."
       subs:
         [
           'https://loot.github.io/docs/help/Changing-Plugin-Types-In-Starfield.html',
@@ -457,7 +457,7 @@ plugins:
   - name: 'sfbgs01c.esm'
     url:
       - link: 'https://creations.bethesda.net/en/starfield/details/f84790ea-caeb-4a73-9d06-d4db254dc37d/Water_Cooled_Miners__39__Outfit/'
-        name: 'Water-Cooled Miners’ Outfit'
+        name: "Water-Cooled Miners' Outfit"
     group: *bgsCreationsGroup
 
   - name: 'sfbgs02a_a.esm'
@@ -615,7 +615,7 @@ plugins:
   - name: 'CaptLockerUnlimited.esp'
     url:
       - link: 'https://www.nexusmods.com/starfield/mods/911/'
-        name: 'Captain’s Locker Unlimited'
+        name: "Captain's Locker Unlimited"
     msg:
       - <<: *corrupt
         condition: 'checksum("CaptLockerUnlimited.esp", F41DB3F5)'
