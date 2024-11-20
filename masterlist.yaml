@@ -3,7 +3,7 @@
 # data that gets re-used.
 prelude:
   common:
-  # Message Anchors
+    # Message Anchors
     - &alreadyInX
       type: error
       content: 'Delete. Already included in {0}.'
@@ -14,15 +14,15 @@ prelude:
 
     - &alsoUseX
       type: say
-      content: 'It''s highly recommended that you also use {0}.'
+      content: 'It’s highly recommended that you also use {0}.'
 
     - &compatIssuesWithX
       type: say
-      content: 'This plugin has compatibility issues with {0}. For more information, read this mod''s compatibility notes.'
+      content: 'This plugin has compatibility issues with {0}. For more information, read this mod’s compatibility notes.'
 
     - &compatNotes
       type: say
-      content: 'It is recommended that you read this mod''s [Compatibility Notes]({0}).'
+      content: 'It is recommended that you read this mod’s [Compatibility Notes]({0}).'
 
     - &compatPatch
       type: say
@@ -43,11 +43,11 @@ prelude:
     - &deleteOrDeactivateX
       type: error
       content: 'Delete or deactivate. {0}'
-      subs: [ '' ]
+      subs: ['']
 
     - &deletePlugin
       type: warn
-      content: 'When using **{0}**, it''s recommended that you deactivate or delete this ESP file but keep the resources (e.g. meshes, textures) installed with this mod.'
+      content: 'When using **{0}**, it’s recommended that you deactivate or delete this ESP file but keep the resources (e.g. meshes, textures) installed with this mod.'
 
     - &deprecated
       type: warn
@@ -59,7 +59,7 @@ prelude:
 
     - &essentialFiles
       type: warn
-      content: 'Another mod seems to be overwriting one of this mod''s essential files. Please ensure you''re using this mod''s version of {0} or a compatible version if available.'
+      content: 'Another mod seems to be overwriting one of this mod’s essential files. Please ensure you’re using this mod’s version of {0} or a compatible version if available.'
 
     - &includesX
       type: say
@@ -87,7 +87,7 @@ prelude:
 
     - &missingRequirementXforPlugin
       type: warn
-      content: 'Some of this plugin''s requirements seem to be missing. Please ensure you have correctly installed **{0}**.'
+      content: 'Some of this plugin’s requirements seem to be missing. Please ensure you have correctly installed **{0}**.'
 
     - &moddingPlugin
       type: error
@@ -100,7 +100,7 @@ prelude:
     - &obsolete
       type: warn
       content: 'Obsolete. Update to the latest version. {0}'
-      subs: [ '' ]
+      subs: ['']
 
     - &optional
       type: say
@@ -116,7 +116,7 @@ prelude:
 
     - &patchIncluded
       type: say
-      content: 'You seem to be using **{0}**, but you have not enabled a compatibility patch for this mod. A compatibility patch is included with this plugin''s installer.'
+      content: 'You seem to be using **{0}**, but you have not enabled a compatibility patch for this mod. A compatibility patch is included with this plugin’s installer.'
 
     - &patchOutdated
       type: warn
@@ -124,7 +124,7 @@ prelude:
 
     - &patchProvided
       type: say
-      content: 'You seem to be using **{0}**, but you have not enabled a compatibility patch for this mod. A compatibility patch is provided on this plugin''s mod page.'
+      content: 'You seem to be using **{0}**, but you have not enabled a compatibility patch for this mod. A compatibility patch is provided on this plugin’s mod page.'
 
     - &patchUnavailable
       type: warn
@@ -140,7 +140,7 @@ prelude:
 
     - &renameXtoY
       type: warn
-      content: 'You need to rename {0} to {1} or this mod won''t work.'
+      content: 'You need to rename {0} to {1} or this mod won’t work.'
 
     # Useful for when a plugin needs SkyUI, but shouldn't load after it (eg. when it's a master plugin).
     - &requiresMCM_X
@@ -173,13 +173,13 @@ prelude:
     - &useBashTweakInstead
       type: say
       content: 'A Bashed Patch tweak can be used instead of this plugin. {0}'
-      subs: [ '' ]
+      subs: ['']
       condition: 'file("Bashed Patch.*\.esp")'
 
     - &useINITweakInstead
       type: say
       content: 'An INI tweak can be used instead of this plugin. {0}'
-      subs: [ '' ]
+      subs: ['']
 
     - &useInstead
       type: warn
@@ -203,7 +203,7 @@ prelude:
 
     - &versionPrecedence
       type: error
-      content: 'Delete {0} from {1}. {2}''s version must take precedence.'
+      content: 'Delete {0} from {1}. {2}’s version must take precedence.'
 
     - &versionUpToDateX
       type: say
@@ -217,12 +217,15 @@ prelude:
       type: error
       content: 'Requires version **{0}** or greater of **{1}**.'
 
-  # Cleaning Data Anchors
-  # Global Anchors
+    # Cleaning Data Anchors
+    # Global Anchors
     - &changeUnsupported
       type: say
-      content: 'Changing the type of an existing plugin isn''t supported. Additional details are provided [here]({0}).'
-      subs: [ 'https://loot.github.io/docs/help/Changing-Plugin-Types-In-Starfield.html' ]
+      content: 'Changing the type of an existing plugin isn’t supported. Additional details are provided [here]({0}).'
+      subs:
+        [
+          'https://loot.github.io/docs/help/Changing-Plugin-Types-In-Starfield.html',
+        ]
 
     - &filenameExtension
       type: error
@@ -235,7 +238,7 @@ prelude:
     - &latestLOOTThread
       type: say
       content: '[Latest LOOT thread]({0}).'
-      subs: [ 'https://loot.github.io/latest-thread/' ]
+      subs: ['https://loot.github.io/latest-thread/']
 
     - &pluginEnabler
       type: warn
@@ -254,7 +257,7 @@ prelude:
       content: 'You seem to be using **{0}**, but it has been superseded. It is recommended that you use **{1}** instead.'
 
 common:
-# File Anchors
+  # File Anchors
   - &SFSE
     name: '../sfse_loader.exe'
     display: '[Starfield Script Extender](https://sfse.silverlock.org/)'
@@ -264,27 +267,27 @@ common:
 bash_tags: []
 
 globals:
-# Unsupported Plugin type change
+  # Unsupported Plugin type change
   - *changeUnsupported
 
-# Filename extension .esp
+  # Filename extension .esp
   - <<: *filenameExtension
     subs:
       - 'Starfield'
       - '.esp'
     condition: 'file("([^\.]+\.esp)")'
 
-# Filename extension .esl
+  # Filename extension .esl
   - <<: *filenameExtension
     subs:
       - 'Starfield'
       - '.esl'
     condition: 'file("([^\.]+\.esl)")'
 
-# Latest LOOT Thread
+  # Latest LOOT Thread
   - *latestLOOTThread
 
-# Plugins.txt Enabler
+  # Plugins.txt Enabler
   - <<: *pluginEnabler
     subs:
       - '[Plugins.txt Enabler](https://www.nexusmods.com/starfield/mods/4157/)'
@@ -292,23 +295,23 @@ globals:
       - '1.12.30.0'
     condition: 'readable("../Starfield.exe") and product_version("../Starfield.exe", "1.12.30.0", >=) and (file("SFSE/Plugins/SFPluginsTxtEnabler.dll") or file("../SFPluginsTxtEnabler.asi"))'
 
-# Latest Version
+  # Latest Version
   # Starfield Game Runtime
   - <<: *versionOldX
-    subs: [ '**Starfield**' ]
+    subs: ['**Starfield**']
     condition: 'readable("../Starfield.exe") and product_version("../Starfield.exe", "1.14.70.0", <)'
   - <<: *versionUpToDateX
-    subs: [ '**Starfield**' ]
+    subs: ['**Starfield**']
     condition: 'readable("../Starfield.exe") and product_version("../Starfield.exe", "1.14.70.0", >=)'
   # SFSE
   - <<: *versionOldX
-    subs: [ '**[SFSE](https://www.nexusmods.com/starfield/mods/106/)**' ]
+    subs: ['**[SFSE](https://www.nexusmods.com/starfield/mods/106/)**']
     condition: 'file("../sfse_loader.exe") and file("../sfse_1_([7-9]|1[0-4])_\d+\.dll") and version("../sfse_1_14_70.dll", "0.0.2.13", <) and readable("../Starfield.exe") and product_version("../Starfield.exe", "1.14.70.0", >=)'
   - <<: *versionUpToDateX
-    subs: [ '**SFSE**' ]
+    subs: ['**SFSE**']
     condition: 'version("../sfse_1_14_70.dll", "0.0.2.13", >=) and readable("../Starfield.exe") and product_version("../Starfield.exe", "1.14.70.0", >=)'
 
-# SFSE
+  # SFSE
   # Missing
   - <<: *scriptExtenderMissing
     subs:
@@ -320,38 +323,38 @@ groups:
   - name: &mainGroup Main Plugins
 
   - name: &bgsCreationsGroup Bethesda Game Studios Creations
-    after: [ *mainGroup ]
+    after: [*mainGroup]
 
   - name: &fixesGroup Fixes & Resources
-    after: [ *bgsCreationsGroup ]
+    after: [*bgsCreationsGroup]
 
   - name: &earlyLoadersGroup Early Loaders
-    after: [ *fixesGroup ]
+    after: [*fixesGroup]
 
   - name: default
-    after: [ *earlyLoadersGroup ]
+    after: [*earlyLoadersGroup]
 
   - name: &lowPriorityGroup Low Priority Overrides
     description: 'A group for modules that must load after most other mods.'
-    after: [ default ]
+    after: [default]
 
   - name: &coreGroup Core Mods
-    after: [ *lowPriorityGroup ]
+    after: [*lowPriorityGroup]
 
   - name: &highPriorityGroup High Priority Overrides
-    after: [ *coreGroup ]
+    after: [*coreGroup]
 
   - name: &lateLoadersGroup Late Loaders
-    after: [ *highPriorityGroup ]
+    after: [*highPriorityGroup]
 
   - name: &dynamicPatchGroup Dynamic Patches
-    after: [ *lateLoadersGroup ]
+    after: [*lateLoadersGroup]
 
   - name: &lateChangesGroup Late Fixes & Changes
-    after: [ *dynamicPatchGroup ]
+    after: [*dynamicPatchGroup]
 
 plugins:
-###### Official Game Files ######
+  ###### Official Game Files ######
   - name: 'Starfield.esm'
     group: *mainGroup
   - name: 'Constellation.esm'
@@ -371,14 +374,14 @@ plugins:
   - name: 'SFBGS008.esm'
     group: *mainGroup
 
-###### Official DLC ######
+  ###### Official DLC ######
   - name: 'ShatteredSpace.esm'
     url:
       - link: 'https://creations.bethesda.net/en/starfield/details/b6b52ca2-3f1f-4316-bef8-dcb0bb2dcc32/Starfield__Shattered_Space/'
         name: 'Starfield: Shattered Space'
     group: *mainGroup
 
-###### Official BGS Creations ######
+  ###### Official BGS Creations ######
   - name: 'sfbgs00a_a.esm'
     url:
       - link: 'https://creations.bethesda.net/en/starfield/details/31ccf130-4852-417b-842a-9d82672028e4/Skin__Blackout__Drum_Beat_/'
@@ -454,7 +457,7 @@ plugins:
   - name: 'sfbgs01c.esm'
     url:
       - link: 'https://creations.bethesda.net/en/starfield/details/f84790ea-caeb-4a73-9d06-d4db254dc37d/Water_Cooled_Miners__39__Outfit/'
-        name: 'Water-Cooled Miners'' Outfit'
+        name: 'Water-Cooled Miners’ Outfit'
     group: *bgsCreationsGroup
 
   - name: 'sfbgs02a_a.esm'
@@ -511,8 +514,8 @@ plugins:
         name: 'Trackers Alliance: The Vulture'
     group: *bgsCreationsGroup
 
-###### Verified Creations ######
-###### Base Game Patches ######
+  ###### Verified Creations ######
+  ###### Base Game Patches ######
   - name: 'StarfieldCommunityPatch.esm'
     url:
       - link: 'https://www.nexusmods.com/starfield/mods/1/'
@@ -544,13 +547,13 @@ plugins:
       - link: 'https://creations.bethesda.net/en/starfield/details/b752542d-e488-437d-8c99-a3e5a19cad64/Unofficial_Shattered_Space_Patch/'
         name: 'Unofficial Shattered Space Patch (Bethesda.net Mods)'
     group: *fixesGroup
-    after: [ 'unofficial starfield patch.esm' ]
+    after: ['unofficial starfield patch.esm']
 
-###### Modding Tools - Resources ######
-###### Modding Tools - Generated Files ######
-###### Resources & Frameworks ######
-###### AudioVisual ######
-###### AudioVisual - Animations & Physics ######
+  ###### Modding Tools - Resources ######
+  ###### Modding Tools - Generated Files ######
+  ###### Resources & Frameworks ######
+  ###### AudioVisual ######
+  ###### AudioVisual - Animations & Physics ######
   - name: 'MoreDramaticGravJumps\.es[mp]'
     url:
       - link: 'https://www.nexusmods.com/starfield/mods/2413/'
@@ -558,21 +561,24 @@ plugins:
   - name: 'MoreDramaticGravJumps.esp'
     msg:
       - <<: *obsolete
-        subs: [ '[More Dramatic Grav Jumps .esm Plugin](https://www.nexusmods.com/starfield/mods/2413/)' ]
+        subs:
+          [
+            '[More Dramatic Grav Jumps .esm Plugin](https://www.nexusmods.com/starfield/mods/2413/)',
+          ]
 
-###### AudioVisual - Models & Textures ######
-###### AudioVisual - Sound & Music ######
-###### AudioVisual - Water ######
-###### AudioVisual - Weather & Lighting ######
-###### Character Appearance - Body,face & hair ######
-###### Character Appearance - Children ######
-###### Character Appearance - NPCs ######
-###### Character Appearance - Presets ######
-###### Encounters - Allies ######
-###### Encounters - Enemies ######
-###### Encounters - Neutrals ######
-###### Environment, Landscape & Flora ######
-###### Gameplay ######
+  ###### AudioVisual - Models & Textures ######
+  ###### AudioVisual - Sound & Music ######
+  ###### AudioVisual - Water ######
+  ###### AudioVisual - Weather & Lighting ######
+  ###### Character Appearance - Body,face & hair ######
+  ###### Character Appearance - Children ######
+  ###### Character Appearance - NPCs ######
+  ###### Character Appearance - Presets ######
+  ###### Encounters - Allies ######
+  ###### Encounters - Enemies ######
+  ###### Encounters - Neutrals ######
+  ###### Environment, Landscape & Flora ######
+  ###### Gameplay ######
   - name: 'cargo2x.esp'
     url:
       - link: 'https://www.nexusmods.com/starfield/mods/1049/'
@@ -581,8 +587,8 @@ plugins:
       - <<: *corrupt
         condition: 'checksum("cargo2x.esp", A5257F3C)'
 
-###### Gameplay - Character Classes & Races ######
-###### Gameplay - Combat ######
+  ###### Gameplay - Character Classes & Races ######
+  ###### Gameplay - Combat ######
   - name: 'RealisticDamageMultipliers.esm'
     url:
       - link: 'https://www.nexusmods.com/starfield/mods/188/'
@@ -591,7 +597,7 @@ plugins:
       - <<: *corrupt
         condition: 'checksum("RealisticDamageMultipliers.esm", CBC568FF)'
 
-###### Gameplay - Crafting & Harvesting ######
+  ###### Gameplay - Crafting & Harvesting ######
   - name: 'legendaries\.es[mp]'
     url:
       - link: 'https://www.nexusmods.com/starfield/mods/1379/'
@@ -599,18 +605,20 @@ plugins:
   - name: 'legendaries.esp'
     msg:
       - <<: *obsolete
-        subs: [ '[Legendary Modifications .esm Plugin](https://www.nexusmods.com/starfield/mods/1379/)' ]
+        subs:
+          [
+            '[Legendary Modifications .esm Plugin](https://www.nexusmods.com/starfield/mods/1379/)',
+          ]
         condition: 'checksum("legendaries.esp", 333DF58A) or checksum("legendaries.esp", 62E07118)'
 
-###### Gameplay - Economy & Item Balance ######
+  ###### Gameplay - Economy & Item Balance ######
   - name: 'CaptLockerUnlimited.esp'
     url:
       - link: 'https://www.nexusmods.com/starfield/mods/911/'
-        name: 'Captain''s Locker Unlimited'
+        name: 'Captain’s Locker Unlimited'
     msg:
       - <<: *corrupt
         condition: 'checksum("CaptLockerUnlimited.esp", F41DB3F5)'
-
 ###### Gameplay - Abilities ######
 ###### Gameplay - Mount & Follower Managers ######
 ###### Gameplay - NPC Balance & Distribution ######
