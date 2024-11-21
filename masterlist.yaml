@@ -222,10 +222,7 @@ prelude:
     - &changeUnsupported
       type: say
       content: "Changing the type of an existing plugin isn't supported. Additional details are provided [here]({0})."
-      subs:
-        [
-          'https://loot.github.io/docs/help/Changing-Plugin-Types-In-Starfield.html',
-        ]
+      subs: ['https://loot.github.io/docs/help/Changing-Plugin-Types-In-Starfield.html']
 
     - &filenameExtension
       type: error
@@ -562,10 +559,7 @@ plugins:
   - name: 'MoreDramaticGravJumps.esp'
     msg:
       - <<: *obsolete
-        subs:
-          [
-            '[More Dramatic Grav Jumps .esm Plugin](https://www.nexusmods.com/starfield/mods/2413/)',
-          ]
+        subs: ['[More Dramatic Grav Jumps .esm Plugin](https://www.nexusmods.com/starfield/mods/2413/)']
 
   ###### AudioVisual - Models & Textures ######
   ###### AudioVisual - Sound & Music ######
@@ -606,10 +600,7 @@ plugins:
   - name: 'legendaries.esp'
     msg:
       - <<: *obsolete
-        subs:
-          [
-            '[Legendary Modifications .esm Plugin](https://www.nexusmods.com/starfield/mods/1379/)',
-          ]
+        subs: ['[Legendary Modifications .esm Plugin](https://www.nexusmods.com/starfield/mods/1379/)']
         condition: 'checksum("legendaries.esp", 333DF58A) or checksum("legendaries.esp", 62E07118)'
 
   ###### Gameplay - Economy & Item Balance ######

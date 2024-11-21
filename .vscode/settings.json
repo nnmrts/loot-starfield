@@ -1,6 +1,7 @@
 {
 	"yaml.format.singleQuote": true,
 	"yaml.format.enable": true,
+	"yaml.format.printWidth": 1000,
 	"[yaml]": {
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2,
