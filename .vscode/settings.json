@@ -1,5 +1,5 @@
 {
-	"yaml.format.singleQuote": true,
+	"yaml.format.singleQuote": false,
 	"yaml.format.enable": true,
 	"yaml.format.bracketSpacing": true,
 	"yaml.format.printWidth": 1000,
